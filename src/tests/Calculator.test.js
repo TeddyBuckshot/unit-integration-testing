@@ -32,24 +32,24 @@ describe('Calculator', () => {
   });
 
   it('should be able to subtract 2 from 8 to get 6', () => {
-    const button7 = container.find('#number2');
+    const button2 = container.find('#number2');
     const buttonminus = container.find('#operator-subtract');
-    const button4 = container.find('#number8');
+    const button8 = container.find('#number8');
     const buttonequal = container.find('#operator-equals');
-    button7.simulate('click');
+    button2.simulate('click');
     buttonminus.simulate('click');
-    button4.simulate('click');
+    button8.simulate('click');
     buttonequal.simulate('click');
     const runningTotal = container.find('#running-total');
-    expect(runningTotal.text()).toEqual('6');
+    expect(runningTotal.text()).toEqual('-6');
   });
 
   it('should be able to multiply 2 by 5 and get 10', () => {
-    const button3 = container.find('#number2');
+    const button2 = container.find('#number2');
     const buttontimes = container.find('#operator-multiply');
     const button5 = container.find('#number5');
     const buttonequal = container.find('#operator-equals');
-    button3.simulate('click');
+    button2.simulate('click');
     buttontimes.simulate('click');
     button5.simulate('click');
     buttonequal.simulate('click');

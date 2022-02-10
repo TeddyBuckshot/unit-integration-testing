@@ -79,7 +79,7 @@ describe("Calculator", () => {
   });
 
   it('should display zero when multiplied by zero', () => {
-    cy.get('#number5').click();
+    cy.get('#number').click();
     cy.get('#operator-divide').click();
     cy.get('#number0').click();
     cy.get('#operator-equals').click();

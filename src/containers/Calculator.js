@@ -79,11 +79,13 @@ function App() {
     setRunningTotal(parseFloat(previousTotal) * parseFloat(number));
   }
 
+  // edited function to handle infinity when dividing by zero
   const divide = (number) => {
-    if (number === 0){
-      setRunningTotal('Error');
-    }else{
-      setRunningTotal(parseFloat(previousTotal) / parseFloat(number));
+    const answer = parseFloat(previousTotal) / parseFloat(number);
+    if (isFinite(answer)) {
+      setRunningTotal(answer);
+    } else {
+      setRunningTotal('can\'t divide by zero')
     }
   }
 

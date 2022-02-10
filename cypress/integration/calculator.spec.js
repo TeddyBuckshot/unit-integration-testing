@@ -79,10 +79,10 @@ describe("Calculator", () => {
   });
 
   it('should display zero when multiplied by zero', () => {
-    cy.get('#number').click();
+    cy.get('#number1').click();
     cy.get('#operator-divide').click();
     cy.get('#number0').click();
     cy.get('#operator-equals').click();
-    cy.get('#running-total').should('contain', 'cannot divide by 0');
+    cy.get('#running-total').should('contain', 'can\'t divide by zero');
   });
 })
